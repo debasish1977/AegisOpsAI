@@ -1,0 +1,32 @@
+Functional requirements — 15 capabilities
+---------------------------------------------
+Priority	ID	    Functional requirement	Acceptance condition
+P0	        FR-01	Service registration and discovery	Register and manage service ownership, environment and dependencies
+P0	        FR-02	OpenTelemetry ingestion	Collect traces, metrics and logs from Java applications
+P0	        FR-03	Distributed event streaming	Transport and replay telemetry-derived events through Kafka
+P0	        FR-04	Real-time alerting	Detect rule violations with controlled detection latency
+P0	        FR-05	ML anomaly detection	Detect unusual behavior beyond static thresholds
+P0	        FR-06	Incident lifecycle	Create, acknowledge, assign, resolve and audit incidents
+P0	        FR-07	Alert correlation	Group duplicate and causally related alerts
+P0	        FR-08	Root-cause analysis	Rank likely causes with supporting evidence
+P0	        FR-09	GenAI incident analysis	Generate structured, grounded incident explanations
+P0	        FR-10	Vector knowledge retrieval	Retrieve relevant incidents and runbooks using Pinecone
+P0	        FR-11	Remediation workflow	Approve, execute and verify controlled recovery actions
+P1	        FR-12	Predictive monitoring	Forecast saturation and SLO-risk conditions
+P1	        FR-13	Service dependency visualization	Display dynamic service topology and affected dependencies
+P1	        FR-14	AI incident assistant	Allow operators to investigate incidents conversationally
+P1	        FR-15	Continuous learning	Evaluate model accuracy and incorporate incident feedback
+
+5. Non-functional requirements
+Dimension	     Target
+Scale	         100 services and 50K normalized signal events/sec
+Detection	     P95 under 10 seconds from event arrival
+Availability	 99.95% monthly objective for the critical control plane
+Reliability	     At-least-once delivery, idempotent processing
+Recovery	     RPO 15 minutes, RTO 60 minutes for stateful components
+Latency	         P95 under 200 ms for simple incident reads under defined load
+Security	     IAM least privilege, tenant-aware RBAC, encryption
+ML inference	 P95 under 100 ms for lightweight inference under defined load
+AI analysis	     P95 under 60 seconds for completed analysis
+Cost	         Defined per-environment budget and automatic cleanup
+Audit	         All incident transitions and remediation actions traceable
