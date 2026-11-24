@@ -48,6 +48,7 @@ terraform validate
 
 # Preview infrastructure changes
 terraform plan
+:q!:q!
 
 # Provision infrastructure after reviewing the plan
 terraform apply
