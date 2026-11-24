@@ -1,0 +1,60 @@
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.ipynb_checkpoints/
+
+# Java
+target/
+build/
+.gradle/
+*.class
+*.jar
+
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+*.tfplan
+crash.log
+
+# ML and AI
+.cache/
+models/
+checkpoints/
+*.pt
+*.pth
+*.safetensors
+*.onnx
+
+# Node
+node_modules/
+dist/
+
+# Credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.aws/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+logs/

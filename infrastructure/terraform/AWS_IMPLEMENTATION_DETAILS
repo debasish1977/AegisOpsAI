@@ -1,0 +1,59 @@
+Step	What I will build	               Verification
+1	AWS CLI and Terraform setup	aws sts    get-caller-identity
+2	Terraform project structure	           terraform fmt
+3	Remote state backend	               S3 backend works
+4	VPC, subnets, routing	               Two AZs configured
+5	Security groups and IAM	Least-privilege rules
+6	ECR repository	                       Image can be pushed
+7	ECS cluster	Cluster active
+8	Task definition	Java 21 container registered
+9	ECS service	                           Two tasks running
+10	Application Load Balancer	           Health checks passing
+11	CloudWatch logs	Application logs visible
+12	Autoscaling and deployment safety	Scaling and rollback tested
+13	CI/CD integration	                Automated deployment
+14	Production hardening	            HTTPS, monitoring, security checks
+
+
+
+
+Commands
+------------
+1. Install Terraform On MacOS
+brew install hashicorp/tap/terraform
+2. AWS CLI
+brew install awscli
+3. kubectl
+brew install kubectl
+4. Helm
+brew install helm
+5. eksctl
+brew install eksctl
+6. Docker
+brew install --cask docker
+7. Terragrunt
+brew install terragrunt
+
+
+Terraform Commands
+------------------
+# Initialize Terraform
+terraform init
+
+# Format configuration files
+terraform fmt -recursive
+
+# Validate configuration
+terraform validate
+
+# Preview infrastructure changes
+terraform plan
+
+# Provision infrastructure after reviewing the plan
+terraform apply
+
+# Inspect deployed resources
+terraform state list
+
+# Display infrastructure outputs
+terraform output
